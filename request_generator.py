@@ -2,13 +2,14 @@
 
 import random
 class RequestGenerator:
-    def __init__(self, floor_count, request_probability):
+    def __init__(self, floor_count, request_controller):
         self.FLOOR_COUNT = floor_count
-        self.request_probability = request_probability
+        self.request_controller = request_controller
 
     def generate_request(self):
         # if request should be generated
-        if (self.random_boolean(self.request_probability)):
+        request_probability = self.request_controller.get_request_probability()
+        if (self.random_boolean(request_probability)):
             # get random start floor
             start = self.random_floor(self.FLOOR_COUNT)
             # get random destination floor

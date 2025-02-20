@@ -26,9 +26,9 @@ app = Flask(__name__)
 # Initialize Elevator and Scheduler
 elevator = Elevator(FLOOR_COUNT, MAX_LOAD)
 scheduler = Scheduler(elevator)
-clock = VirtualClock(scale=24)
+clock = VirtualClock(scale=30)
 request_controller = FluctuatingRequestController(clock)
-request_generator = RequestGenerator(FLOOR_COUNT, request_controller)
+request_generator = RequestGenerator(FLOOR_COUNT, request_controller, clock)
 statistics = Statistics(clock)
 ride_log = RideLog(clock)
 

@@ -24,7 +24,7 @@ class RideLog:
             "real_time": int(datetime.now().timestamp()),
             "start": start,
             "end": end,
-            "person_id": id
+            "person_id": person_id
         }
         self.rides.append(ride_entry)
 

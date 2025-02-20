@@ -13,7 +13,7 @@ def random_boolean(request_probability):
 
 
 class RequestGenerator:
-    def __init__(self, floor_count, request_controller, clock, num_people):
+    def __init__(self, floor_count, request_controller, clock, num_people=100):
         """
         :param floor_count: Number of floors in the building.
         :param request_controller: Instance of FluctuatingRequestController.
@@ -27,7 +27,7 @@ class RequestGenerator:
 
         # Initialize people with unique IDs and random starting floors (except 0)
         self.people = {
-            generate_person_id(i): random.randint(1, floor_count - 1)  # No one starts at 0
+            generate_person_id(i): 0  # No one starts at 0
             for i in range(num_people)
         }
 

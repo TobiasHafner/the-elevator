@@ -12,7 +12,7 @@ This project is designed to run as a standalone Python application using a virtu
 
 1. Clone the Repository:
 ```bash
-git clone git@github.com:TobiasHafner/elevator_project.git
+git clone git@github.com:TobiasHafner/the-elevator.git
 cd elevator_project
 ```
 
